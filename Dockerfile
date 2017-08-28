@@ -1,4 +1,4 @@
-FROM teamcity-agent:latest
+FROM jetbrains/teamcity-agent:latest
 
 MAINTAINER Wickstargazer <wickyorama@gmail.com>
 
