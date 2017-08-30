@@ -21,4 +21,6 @@ LOG_DIR=/opt/buildagent/logs
 
 configure
 
+chmod +x ${AGENT_DIST}/bin/*.sh; check; sync
+
 ${AGENT_DIST}/bin/agent.sh start
