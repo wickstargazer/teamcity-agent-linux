@@ -20,3 +20,5 @@ CONFIG_DIR=/data/teamcity_agent/conf
 LOG_DIR=/opt/buildagent/logs
 
 configure
+
+${AGENT_DIST}/bin/agent.sh start
