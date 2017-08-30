@@ -12,7 +12,6 @@ RUN pip install awscli
 
 VOLUME "/opt/buildagent/work"
 
-RUN useradd -m buildagent && \
-    chmod +x /configure.sh && sync
+RUN chmod +x /configure.sh && sync
 
 CMD [ "/configure.sh"]
