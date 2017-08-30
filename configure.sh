@@ -9,8 +9,8 @@ check() {
 
 configure() {
   echo -e "/nteamcity.agent.node.role=${NODE_ROLE}/n" >> /data/teamcity_agent/conf/buildAgent.properties
-  mkdir ~/.aws/config
-  echo -e "[default]\nregion=$Env:AWS_REGION" >> ~/.aws/config
+  #mkdir ~/.aws/config
+  #echo -e "[default]\nregion=$Env:AWS_REGION" >> ~/.aws/config
 }
 
 AGENT_DIST=/opt/buildagent
