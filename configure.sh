@@ -24,3 +24,17 @@ configure
 chmod +x ${AGENT_DIST}/bin/*.sh; check; sync
 
 ${AGENT_DIST}/bin/agent.sh start
+
+
+while [ ! -f ${LOG_DIR}/teamcity-agent.log ];
+do
+   echo -n "."
+   sleep 1
+done
+
+trap "${AGENT_DIST}/bin/agent.sh stop; exit 0;" SIGINT SIGTERM SIGHUP
+
+touch /root/anchor
+
+tail -qF ${LOG_DIR}/teamcity-agent.log /root/anchor &
+wait
