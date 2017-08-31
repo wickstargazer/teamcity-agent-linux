@@ -13,7 +13,7 @@ configure() {
     ${AGENT_DIST}/bin/agent.sh configure $*; check
   fi
 
-  echo -e "/nteamcity.agent.node.role=${NODE_ROLE}/n" >> /data/teamcity_agent/conf/buildAgent.properties
+  echo $"/nteamcity.agent.node.role=${NODE_ROLE}/n" >> /data/teamcity_agent/conf/buildAgent.properties
   #mkdir ~/.aws/config
   #echo -e "[default]\nregion=$Env:AWS_REGION" >> ~/.aws/config
 }
