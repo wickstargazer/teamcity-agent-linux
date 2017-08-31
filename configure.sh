@@ -23,6 +23,8 @@ configure
 
 chmod +x ${AGENT_DIST}/bin/*.sh; check; sync
 
+rm -f ${LOG_DIR}/*.pid
+
 ${AGENT_DIST}/bin/agent.sh start
 
 
